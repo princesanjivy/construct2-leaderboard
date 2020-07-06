@@ -127,8 +127,8 @@ cr.plugins_.Leaderboard = function(runtime)
 		// Called when a non-readonly property has been edited in the debugger. Usually you only
 		// will need 'name' (the property name) and 'value', but you can also use 'header' (the
 		// header title for the section) to distinguish properties with the same name.
-		// if (name === "My property")
-		// 	this.myProperty = value;
+		if (name === "My property")
+			this.myProperty = value;
 	};
 	/**END-PREVIEWONLY**/
 

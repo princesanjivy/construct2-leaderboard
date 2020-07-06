@@ -74,10 +74,10 @@ AddAction(0, af_none, "Sign-In", "Leaderboard", "Sign-In to Play Games", "Sign-I
 
 AddStringParam("Leaderboard Id", "Enter Play Games Leaderboard Id");
 AddNumberParam("Score", "Enter the score to submit in Leaderboard");
-AddAction(1, af_none, "Submit Score", "Leaderboard", "Leaderboard Id {0}, Score {1}", "Submit score to Play Games Leaderboard", "setScore");
+AddAction(1, af_none, "Submit Score", "Leaderboard", "Submit Score {1} to Leaderboard Id {0}", "Submit score to Play Games Leaderboard", "setScore");
 
 AddStringParam("Leaderboard Id", "Enter Play Games Leaderboard Id");
-AddAction(2, af_none, "Show Leaderboard", "Leaderboard", "Leaderboard Id {0}", "Show Play Games Leaderboard", "showLeaderboard");
+AddAction(2, af_none, "Show Leaderboard", "Leaderboard", "Show Leaderboard Id {0}", "Show Play Games Leaderboard", "showLeaderboard");
 
 ////////////////////////////////////////
 // Expressions
@@ -106,9 +106,9 @@ ACESDone();
 // new cr.Property(ept_combo,		name,	"Item 1",		description, "Item 1|Item 2|Item 3")	// a dropdown list (initial_value is string of initially selected item)
 // new cr.Property(ept_link,		name,	link_text,		description, "firstonly")		// has no associated value; simply calls "OnPropertyChanged" on click
 
-// var property_list = [
-// 	new cr.Property(ept_integer, 	"My property",		77,		"An example property.")
-// 	];
+var property_list = [
+	// new cr.Property(ept_integer, 	"My property",		77,		"An example property.")
+	];
 
 // Called by IDE when a new object type is to be created
 function CreateIDEObjectType()
@@ -138,11 +138,11 @@ function IDEInstance(instance, type)
 	this.type = type;
 
 	// Set the default property values from the property table
-	// this.properties = {};
-	//
-	// for (var i = 0; i < property_list.length; i++)
-	// 	this.properties[property_list[i].name] = property_list[i].initial_value;
-	//
+	this.properties = {};
+
+	for (var i = 0; i < property_list.length; i++)
+		this.properties[property_list[i].name] = property_list[i].initial_value;
+
 	// Plugin-specific variables
 	// this.myValue = 0...
 }
