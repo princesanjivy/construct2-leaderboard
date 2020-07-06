@@ -1,0 +1,12 @@
+<!-- <author>Prince Sanjivy</author> -->
+<?xml version="1.0" encoding="UTF-8" ?>
+<c2addon>
+	<type>plugin</type>
+	
+	<name>Play Games Leaderboard</name>	
+	<version>1.0.0</version>
+	<author>Prince Sanjivy</author>
+	<website>https://github.com/princesanjivy/construct2-leaderboard</website>
+	<documentation>https://github.com/princesanjivy/construct2-leaderboard</documentation>
+	<description>Google Play games leaderboard plugin for construct2</description>
+</c2addon>
